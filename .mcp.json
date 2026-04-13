@@ -1,0 +1,20 @@
+{
+  "name": "uuid-ai-mcp",
+  "description": "MEOK AI Labs \u2014 uuid-ai-mcp",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/uuid-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "run"
+  ],
+  "categories": [
+    "Utilities",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}
