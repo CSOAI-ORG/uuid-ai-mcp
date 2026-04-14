@@ -1,10 +1,16 @@
 name: uuid-ai-mcp
-description: "MEOK AI Labs — uuid-ai-mcp"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/uuid-ai-mcp
-license: MIT
-categories: [Utilities, Developer Tools]
-tags: [uuid, unique-identifier, guid, id-generation, uuid-v4]
-runtime: python
-entrypoint: server.py
+description: "uuid-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+version: 1.0.0
+tools:
+- name: generate_uuid
+  description: ''
+  parameters:
+  - name: version
+    type: integer
+    required: false
+- name: validate_uuid
+  description: ''
+  parameters:
+  - name: u
+    type: string
+    required: true

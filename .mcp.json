@@ -1,20 +1,35 @@
 {
   "name": "uuid-ai-mcp",
-  "description": "MEOK AI Labs \u2014 uuid-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/uuid-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "uuid-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Utilities",
-    "Developer Tools"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "generate_uuid",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "integer"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "validate_uuid",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "u": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "u"
+        ]
+      }
+    }
+  ]
 }
