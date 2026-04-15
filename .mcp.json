@@ -1,15 +1,24 @@
 {
   "name": "uuid-ai-mcp",
-  "description": "uuid-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 UUID, ULID, and NanoID generation by MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
       "name": "generate_uuid",
-      "description": "",
+      "description": "Generate one or more UUIDs. Supports versions 1, 3, 4, and 5.",
       "parameters": {
         "type": "object",
         "properties": {
           "version": {
+            "type": "integer"
+          },
+          "namespace": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "count": {
             "type": "integer"
           }
         },
@@ -17,18 +26,66 @@
       }
     },
     {
-      "name": "validate_uuid",
-      "description": "",
+      "name": "parse_uuid",
+      "description": "Parse and validate a UUID string, extracting all components.",
       "parameters": {
         "type": "object",
         "properties": {
-          "u": {
+          "uuid_string": {
             "type": "string"
           }
         },
         "required": [
-          "u"
+          "uuid_string"
         ]
+      }
+    },
+    {
+      "name": "generate_ulid",
+      "description": "Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "generate_nanoid",
+      "description": "Generate NanoID(s) - compact URL-friendly unique identifiers.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "size": {
+            "type": "integer"
+          },
+          "alphabet": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "name": "batch_generate",
+      "description": "Batch generate identifiers of a specified type. Efficient for bulk operations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "id_type": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer"
+          }
+        },
+        "required": []
       }
     }
   ]

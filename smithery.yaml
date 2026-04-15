@@ -1,16 +1,53 @@
 name: uuid-ai-mcp
-description: "uuid-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: UUID, ULID, and NanoID generation by MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_uuid
-  description: ''
+  description: Generate one or more UUIDs. Supports versions 1, 3, 4, and 5.
   parameters:
   - name: version
     type: integer
     required: false
-- name: validate_uuid
-  description: ''
+  - name: namespace
+    type: string
+    required: false
+  - name: name
+    type: string
+    required: false
+  - name: count
+    type: integer
+    required: false
+- name: parse_uuid
+  description: Parse and validate a UUID string, extracting all components.
   parameters:
-  - name: u
+  - name: uuid_string
     type: string
     required: true
+- name: generate_ulid
+  description: Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers.
+  parameters:
+  - name: count
+    type: integer
+    required: false
+- name: generate_nanoid
+  description: Generate NanoID(s) - compact URL-friendly unique identifiers.
+  parameters:
+  - name: size
+    type: integer
+    required: false
+  - name: alphabet
+    type: string
+    required: false
+  - name: count
+    type: integer
+    required: false
+- name: batch_generate
+  description: Batch generate identifiers of a specified type. Efficient for bulk
+    operations.
+  parameters:
+  - name: id_type
+    type: string
+    required: false
+  - name: count
+    type: integer
+    required: false
