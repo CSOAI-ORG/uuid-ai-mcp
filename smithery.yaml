@@ -1,5 +1,6 @@
 name: uuid-ai-mcp
-description: UUID, ULID, and NanoID generation by MEOK AI Labs.
+description: AI-powered uuid ai MCP server for agents. Supports generate uuid, parse
+  uuid, generate ulid. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: generate_uuid

@@ -1,6 +1,6 @@
 {
   "name": "uuid-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 UUID, ULID, and NanoID generation by MEOK AI Labs.",
+  "description": "AI-powered uuid ai MCP server for agents. Supports generate uuid, parse uuid, generate ulid. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {
