@@ -88,11 +88,11 @@ def _generate_nanoid(size: int = 21, alphabet: str = None) -> str:
     return "".join(random.choice(alpha) for _ in range(size))
 
 
-mcp = FastMCP("uuid-ai-mcp", instructions="UUID, ULID, and NanoID generation by MEOK AI Labs.")
+mcp = FastMCP("uuid-ai", instructions="UUID, ULID, and NanoID generation by MEOK AI Labs.")
 
 
-@mcp.tool(name="generate_uuid")
-async def generate_uuid(version: int = 4, namespace: str = "", name: str = "", count: int = 1, api_key: str = "") -> dict:
+@mcp.tool()
+def generate_uuid(version: int = 4, namespace: str = "", name: str = "", count: int = 1, api_key: str = "") -> dict:
     """Generate one or more UUIDs. Supports versions 1, 3, 4, and 5."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -143,8 +143,8 @@ async def generate_uuid(version: int = 4, namespace: str = "", name: str = "", c
     }
 
 
-@mcp.tool(name="parse_uuid")
-async def parse_uuid(uuid_string: str, api_key: str = "") -> dict:
+@mcp.tool()
+def parse_uuid(uuid_string: str, api_key: str = "") -> dict:
     """Parse and validate a UUID string, extracting all components."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -209,8 +209,8 @@ async def parse_uuid(uuid_string: str, api_key: str = "") -> dict:
     }
 
 
-@mcp.tool(name="generate_ulid")
-async def generate_ulid(count: int = 1, api_key: str = "") -> dict:
+@mcp.tool()
+def generate_ulid(count: int = 1, api_key: str = "") -> dict:
     """Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -245,8 +245,8 @@ async def generate_ulid(count: int = 1, api_key: str = "") -> dict:
     }
 
 
-@mcp.tool(name="generate_nanoid")
-async def generate_nanoid(size: int = 21, alphabet: str = "", count: int = 1, api_key: str = "") -> dict:
+@mcp.tool()
+def generate_nanoid(size: int = 21, alphabet: str = "", count: int = 1, api_key: str = "") -> dict:
     """Generate NanoID(s) - compact URL-friendly unique identifiers."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -301,8 +301,8 @@ async def generate_nanoid(size: int = 21, alphabet: str = "", count: int = 1, ap
     }
 
 
-@mcp.tool(name="batch_generate")
-async def batch_generate(id_type: str = "uuid4", count: int = 10, api_key: str = "") -> dict:
+@mcp.tool()
+def batch_generate(id_type: str = "uuid4", count: int = 10, api_key: str = "") -> dict:
     """Batch generate identifiers of a specified type. Efficient for bulk operations."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
