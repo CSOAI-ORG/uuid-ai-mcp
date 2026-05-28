@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """UUID, ULID, and NanoID generation and parsing — MEOK AI Labs."""
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json
@@ -96,7 +95,7 @@ def generate_uuid(version: int = 4, namespace: str = "", name: str = "", count: 
     """Generate one or more UUIDs. Supports versions 1, 3, 4, and 5."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -148,7 +147,7 @@ def parse_uuid(uuid_string: str, api_key: str = "") -> dict:
     """Parse and validate a UUID string, extracting all components."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -214,7 +213,7 @@ def generate_ulid(count: int = 1, api_key: str = "") -> dict:
     """Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -250,7 +249,7 @@ def generate_nanoid(size: int = 21, alphabet: str = "", count: int = 1, api_key:
     """Generate NanoID(s) - compact URL-friendly unique identifiers."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -285,6 +284,15 @@ def generate_nanoid(size: int = 21, alphabet: str = "", count: int = 1, api_key:
     total_combinations = alphabet_size ** size
     # Birthday paradox approximation: ~50% collision after sqrt(pi/2 * N)
     import math
+
+STRIPE_199 = "https://buy.stripe.com/00wfZjcgAeUW4c5cyQ8k90K"
+
+def _add_upgrade_tail(response, tier="free"):
+    """Append upgrade nudge to free-tier success responses."""
+    if isinstance(response, dict) and tier == "free":
+        response["_upgrade_note"] = "Pro tier: unlimited calls + priority support. Upgrade: " + STRIPE_199
+    return response
+
     p50_ids = int(math.sqrt(math.pi / 2 * total_combinations)) if total_combinations < 10**50 else None
 
     return {
@@ -306,7 +314,7 @@ def batch_generate(id_type: str = "uuid4", count: int = 10, api_key: str = "") -
     """Batch generate identifiers of a specified type. Efficient for bulk operations."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": STRIPE_199}
     if err := _rl(api_key or "anon"):
         return err
 
@@ -349,5 +357,8 @@ def batch_generate(id_type: str = "uuid4", count: int = 10, api_key: str = "") -
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
