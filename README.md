@@ -1,74 +1,78 @@
-# Uuid Ai
+# Uuid Ai MCP
 
-> By [MEOK AI Labs](https://meok.ai) — UUID, ULID, and NanoID generation by MEOK AI Labs.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/uuid_ai_mcp/)
 
-UUID, ULID, and NanoID generation and parsing — MEOK AI Labs.
+> UUID, ULID, and NanoID generation by MEOK AI Labs
 
-## Installation
+UUID, ULID, and NanoID generation by MEOK AI Labs.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-pip install uuid-ai-mcp
+# Install via pip
+pip install uuid_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install uuid-ai-mcp --client claude
 ```
 
-## Usage
+## ✨ Features
 
-```bash
-# Run standalone
-python server.py
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-# Or via MCP
-mcp install uuid-ai-mcp
-```
+## 📖 Documentation
 
-## Tools
+- [Full Documentation](https://docs.meok.ai/uuid-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-### `generate_uuid`
-Generate one or more UUIDs. Supports versions 1, 3, 4, and 5.
+## 🛡️ Compliance
 
-**Parameters:**
-- `version` (int)
-- `namespace` (str)
-- `name` (str)
-- `count` (int)
+This MCP server is built with **EU AI Act compliance** built-in:
 
-### `parse_uuid`
-Parse and validate a UUID string, extracting all components.
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-**Parameters:**
-- `uuid_string` (str)
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-### `generate_ulid`
-Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers.
+## 🏢 Enterprise
 
-**Parameters:**
-- `count` (int)
+Need custom development, SLA guarantees, or white-label deployment?
 
-### `generate_nanoid`
-Generate NanoID(s) - compact URL-friendly unique identifiers.
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-**Parameters:**
-- `size` (int)
-- `alphabet` (str)
-- `count` (int)
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-### `batch_generate`
-Batch generate identifiers of a specified type. Efficient for bulk operations.
+## 🤝 Part of the MEOK Ecosystem
 
-**Parameters:**
-- `id_type` (str)
-- `count` (int)
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-## Authentication
+## 📜 License
 
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## Links
+---
 
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/uuid-ai-mcp](https://github.com/CSOAI-ORG/uuid-ai-mcp)
-- **PyPI**: [pypi.org/project/uuid-ai-mcp](https://pypi.org/project/uuid-ai-mcp/)
-
-## License
-
-MIT — MEOK AI Labs
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
