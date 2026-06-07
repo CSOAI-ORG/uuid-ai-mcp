@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "uuid-ai-mcp",
+    "description": "AI-powered uuid ai MCP server for agents. Supports generate uuid, parse uuid, generate ulid. By",
+    "version": "1.0.5",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "uuid-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "generate_uuid",
+      "parse_uuid",
+      "generate_ulid",
+      "generate_nanoid",
+      "batch_generate"
+    ]
+  }
+}
