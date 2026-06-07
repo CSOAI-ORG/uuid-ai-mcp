@@ -1,0 +1,9 @@
+# uuid-ai-mcp - Auto-trigger Rules
+
+When the user asks about uuid, use uuid-ai-mcp tools: generate_uuid, parse_uuid, generate_ulid, generate_nanoid, batch_generate
+
+> By [MEOK AI Labs](https://meok.ai) — UUID, ULID, and NanoID generation by MEOK AI Labs.
+
+Install: `pip install uuid-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

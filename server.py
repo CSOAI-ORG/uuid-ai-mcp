@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""UUID, ULID, and NanoID generation and parsing — MEOK AI Labs."""
+"""
+UUID, ULID, and NanoID generation and parsing — MEOK AI Labs."""
 import sys, os
 from auth_middleware import check_access
 
