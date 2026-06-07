@@ -1,0 +1,32 @@
+# Uuid Ai MCP
+
+> UUID, ULID, and NanoID generation by MEOK AI Labs
+
+`uuid-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+
+## Install
+
+```bash
+pip install uuid-ai-mcp
+```
+
+Or run without installing:
+
+```bash
+uvx uuid-ai-mcp
+```
+
+## Tools
+
+- `generate_uuid` — Generate one or more UUIDs. Supports versions 1, 3, 4, and 5.
+- `parse_uuid` — Parse and validate a UUID string, extracting all components.
+- `generate_ulid` — Generate ULID(s) - Universally Unique Lexicographically Sortable Identifiers.
+- `generate_nanoid` — Generate NanoID(s) - compact URL-friendly unique identifiers.
+- `batch_generate` — Batch generate identifiers of a specified type. Efficient for bulk operations.
+
+## Links
+
+- Source: https://github.com/CSOAI-ORG/uuid-ai-mcp
+- PyPI: https://pypi.org/project/uuid-ai-mcp/
+- MEOK AI Labs: https://meok.ai
+- Council of AI: https://councilof.ai
