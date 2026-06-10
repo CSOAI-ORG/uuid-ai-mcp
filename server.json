@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.CSOAI-ORG/uuid-ai-mcp",
   "description": "AI-powered uuid ai MCP server for agents. Supports generate uuid, parse uuid, generate ulid. By",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "repository": {
     "url": "https://github.com/CSOAI-ORG/uuid-ai-mcp",
     "source": "github"
@@ -10,7 +10,7 @@
   "packages": [
     {
       "identifier": "uuid-ai-mcp",
-      "version": "1.0.5",
+      "version": "1.0.10",
       "transport": {
         "type": "stdio"
       },
